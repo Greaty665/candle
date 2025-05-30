@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'AfacadFlux';
+    src: url('AfacadFlux-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'AfacadFlux', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 0.5px; 
+    font-size: 16px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    padding: 20px 30px; /* extra tér a tetején/alján */
+
+  }
+  
+  .navbar-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+.navbar-section.left a {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.navbar-section.left a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #a7745b 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-section.left a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-section.left a:hover {
+  color: #a7745b;
+}
+
+   .logo img {
+    height: 100px;
+  }
+  
+
+  .navbar .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+ 
+  .navbar-section.right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+
+.breadcrumb {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 60px;    
+     text-align: center;  
+}
+
+    .breadcrumb a {
+        color: #6c757d;
+        text-decoration: none; /* opcionális: eltünteti az aláhúzást */
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb .current {
+        color: #343a40;
+        font-weight: bold;
+    }
+
+
+
+
+.product-section {
+  padding: 10px 40px 5px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 45px; /*kártyák közti*/
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+
+
+.product-card {
+  position: relative;
+  background: #e9dcd3;
+  padding: 15px;
+  text-align: center;
+  width: 400px;
+   max-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+   text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.3s ease;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.product-card:hover::before {
+  width: 250%;
+  height: 250%;
+  opacity: 1;
+}
+
+.product-card * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 19px;
+  color: #444444; /*szoveg szin*/
+  text-align: left;
+}
+
+.product-card .price {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+
+
+
+
+
+
+    .footer {
+  background: black;
+  padding: 20px 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.footer ul li a {
+  color: rgb(199, 191, 191);
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 70px; 
+}
+
+.footer-icons a {
+  color: rgb(199, 191, 191);
+  margin-left: 15px;
+  
+  text-decoration: none;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.footer-icons i {
+  display: inline-block;
+  font-size: 35px;
+  line-height: 1;
+  vertical-align: middle;
+}
+

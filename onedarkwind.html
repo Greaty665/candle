@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Termékoldal - Illatgyertya</title>
+        <link rel="stylesheet" href="proba.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+<body>
+
+    <header class="top-bar">
+        <p>A rendelések feldolgozási ideje: 1–5 munkanap</p>
+    </header>
+
+<!--FAVICONT RAKJ BELE MAJD-->
+    <nav class="navbar">
+        <div class="navbar-section left">
+            <a href="termekek.html">Termékek</a>
+            <a href="#">Rólunk</a>
+            <a href="#">Segítség</a>
+            <a href="#">Kapcsolat</a>
+        </div>
+        
+       <div class="navbar-section center logo">
+         <a href="index.html">
+        <img src="images/logo1.png" alt="Logo">
+          </a>
+        </div>
+
+        
+        <div class="navbar-section right">
+          <button><i class="fas fa-search"></i></button>
+          <button><i class="fa-regular fa-user"></i></button>
+          <button><i class="fas fa-shopping-bag"></i></button>
+        </div>
+      </nav>
+    
+
+      <div class="breadcrumb">
+        <a href="index.html">Főoldal</a> > 
+        <a href="termekek.html">Termékek</a> > 
+        <a href="illatgyertyak.html">Szójaviasz fandom illatgyertyák</a> > 
+        <span class="current">ONE DARK WINDOW SZÓJAVIASZ ILLATGYERTYA</span>
+      </div>
+      
+    <main class="product-page">
+  
+        <div class="product">
+          <div class="main-image">
+            <img id="mainImage" src="images/onedarkwindow1.jpg" alt="Fő termék kép">
+          </div>
+          <div class="thumbnail-images">
+            <img src="images/onedarkwindow2.jpg" alt="Kis kép 1" onmouseover="changeImage(this)">
+            <img src="images/onedarkwindow3.jpg" alt="Kis kép 2" onmouseover="changeImage(this)">
+            <img src="images/onedarkwindow1.jpg" alt="Kis kép 3" onmouseover="changeImage(this)">
+          </div>
+        </div>
+      
+
+        <div class="product-info">
+            <h1>ONE DARK WINDOW SZÓJAVIASZ ILLATGYERTYA</h1>
+            <p class="price">3 800 Ft</p>
+
+            <div class="purchase-row">
+                <div class="quantity-selector">
+                  <button class="qty-btn minus">−</button>
+                  <input type="number" min="1" value="1">
+                  <button class="qty-btn plus">+</button>
+                </div>
+              
+                <button class="add-to-cart">KOSÁRBA TESZEM</button>
+              </div>
+              
+
+              <div class="description">
+                <h3 class="toggle-description">Leírás</h3>
+                <div class="description-content">
+                  <p>- 212 ml (MAXI méret)</p>
+                  <p>- Illat: rózsa</p>
+                </div>
+              </div>
+              
+              <div class="reviews">
+                <h3 class="toggle-reviews">Értékelések</h3>
+                <div class="reviews-content">
+                  <p><strong>Anna:</strong> Nagyon kellemes illat, ajánlom! 🌸</p>
+                  <p><strong>Bence:</strong> Szép csomagolás, gyors szállítás!</p>
+                  <!-- Ide jöhet később egy űrlap is új vélemény írásához -->
+                </div>
+              </div>
+              
+
+    </main>
+
+
+
+    <section class="related-products">
+      <div class="section-divider"></div> <!-- Csak ez kapja a vonalat -->
+        <h2>TOVÁBBI TERMÉKEINK</h2>
+          <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/evajacks1.jpg" alt="Termék 1">
+                    <p>Evangeline & Jacks szójaviasz illatgyertya</p>
+                    <p class="price">3 800 Ft</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/azriel1.jpg" alt="Termék 2">
+                    <p>Azriel szójaviasz illatgyertya</p>
+                    <p class="price">3 800 Ft</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/feyreandrhysand1.jpg" alt="Termék 3">
+                    <p>Feyre & Rhysand szójaviasz illatgyertya</p>
+                    <p class="price">3 800 Ft</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/powerless2.jpg" alt="Termék 4">
+                    <p>Powerless szójaviasz illatgyertya</p>
+                    <p class="price">3 800 Ft</p>
+                </div>
+            </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div class="footer-content">
+        <ul>
+          <li><a href="#">ÁLTALÁNOS INFORMÁCIÓK</a></li>
+          <li><a href="#">ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK</a></li>
+          <li><a href="#">ADATKEZELÉSI TÁJÉKOZTATÓ</a></li>
+          <li><a href="#">SEGÍTSÉG</a></li>
+        </ul>
+    
+        <div class="footer-icons">
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:info@valami.hu" aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src;
+         }
+    </script>
+
+
+<script>
+    const minusBtn = document.querySelector(".qty-btn.minus");
+    const plusBtn = document.querySelector(".qty-btn.plus");
+    const input = document.querySelector(".quantity-selector input");
+  
+    minusBtn.addEventListener("click", () => {
+      if (input.value > 1) input.value--;
+    });
+  
+    plusBtn.addEventListener("click", () => {
+      input.value++;
+    });
+  </script>
+  
+  <script>
+    const toggle = document.querySelector('.toggle-description');
+    const content = document.querySelector('.description-content');
+  
+    toggle.addEventListener('click', () => {
+      content.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+  
+
+
+  <script>
+    const toggleReviews = document.querySelector('.toggle-reviews');
+    const reviewsContent = document.querySelector('.reviews-content');
+  
+    toggleReviews.addEventListener('click', () => {
+      reviewsContent.classList.toggle('active');
+      toggleReviews.classList.toggle('open');
+    });
+  </script>
+  
+
+
+
+
+
+
+
+</body>
+</html>

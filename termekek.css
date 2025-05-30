@@ -1,0 +1,249 @@
+
+@font-face {
+    font-family: 'AfacadFlux';
+    src: url('AfacadFlux-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'AfacadFlux', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 0.5px; 
+    font-size: 16px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    padding: 20px 30px; /* extra tér a tetején/alján */
+
+  }
+  
+  .navbar-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+ .navbar-section.left a {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.navbar-section.left a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #a7745b 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-section.left a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-section.left a:hover {
+  color: #a7745b;
+}
+
+
+   .logo img {
+    height: 100px;
+  }
+  
+ 
+  .navbar .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+ 
+  .navbar-section.right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+
+.main-title {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 2rem 0;
+}
+
+.product-category-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.product-category {
+  display: flex;
+  align-items: center; /* Függőleges középre igazítás */
+  justify-content: flex-start;
+  max-width: 70%; /* Rövidebb legyen, ne 90% */
+  height: 250px; /* Mélyebb szekció */
+  margin: 2rem auto;
+  background-color: #f2e2d9;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  gap: 1rem; /* Csökkentett gap, hogy tömörebb legyen */
+   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.product-category:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color: #e9dcd3;
+}
+
+.product-category img {
+  width: 250px; /* Növelt kép */
+  height: 100%;  /* Kitölti a szekció magasságát */
+  object-fit: cover; /* Ne torzuljon */
+  border-radius: 8px;
+}
+
+.product-category .label {
+  flex: 1;
+  font-size: 3rem; /* Nagyobb szöveg */
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  align-items: center; /* Középre igazítás */
+   height: 100%;         /* Kitölti a teljes szekciómagasságot */
+  padding-left: 1rem;   /* Kisebb tér a kép és a szöveg között */
+  text-align: center;
+  text-justify: inter-word;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.label .line-1 {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.line-2 {
+  display: inline-block;
+  margin-top: -5rem; 
+}
+
+.label .line-2 {
+  display: inline-block;
+  font-size: 3.9rem;
+  text-transform: uppercase;
+  width: 12.5ch; /* kb. annyi karakter, amennyi az első sor */
+  text-align: center;
+  letter-spacing: 0.05em; /* hézag minden betű között */
+}
+
+
+
+.label .line-3 {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* hézag minden betű között */
+  /*  width: 12.5ch; kb. annyi karakter, amennyi az első sor */
+}
+
+.line-4 {
+  display: inline-block;
+  margin-top: -5rem; 
+}
+
+.label .line-4 {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+ 
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+.footer {
+  background: black;
+  padding: 20px 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.footer ul li a {
+  color: rgb(199, 191, 191);
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 70px; 
+}
+
+.footer-icons a {
+  color: rgb(199, 191, 191);
+  margin-left: 15px;
+  
+  text-decoration: none;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.footer-icons i {
+  display: inline-block;
+  font-size: 35px;
+  line-height: 1;
+  vertical-align: middle;
+}
